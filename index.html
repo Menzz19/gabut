@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Untuk Vya</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0a1f44, #152c59);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .text-content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            background-color: rgba(10, 15, 30, 0.7);
+            /* Semi-transparan agar teks mudah dibaca */
+            border-radius: 12px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #9ecfff;
+        }
+
+        .background-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .background-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .background-track img {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .background-track img:first-child {
+            top: 0;
+        }
+
+        .background-track img:last-child {
+            bottom: 0;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        canvas#stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Musik Latar -->
+    <audio autoplay loop hidden>
+        <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Efek Bintang Jatuh -->
+    <canvas id="stars"></canvas>
+
+    <!-- Background Foto Bergulir, disesuaikan dengan lebar teks -->
+    <div class="background-slideshow">
+        <div class="background-track">
+            <img src="img/foto5.jpg" />
+            <img src="img/foto7.jpg" />
+        </div>
+    </div>
+
+    <!-- Pesan Romantis -->
+    <div class="text-content">
+        <h1>Untuk Vya, Tuan Putriku yang Selalu Tangguh 🫶</h1>
+
+        <p>Malam ini aku menulis untukmu, bukan sekadar kata, tapi rindu yang menetes perlahan dari hatiku. Aku tahu, di
+            saat aku mengetik ini, kamu pasti lagi meringkuk manja dalam mimpi, entah lagi jadi tuan putri di kerajaan
+            cokelat, atau panda kecil yang ketiduran sambil megang hp yg ampir jatoh wkwk. Lucu ya, kamu itu...
+            dikit-dikit ngantuk, kayak baterai 5% yang nyari colokan cinta. ahihihi 😚</p>
+
+        <p>Vya, kamu tahu nggak? Setiap kali kamu ngantuk di tempat kerja, aku bisa bayangin wajah kamu yang setengah
+            sadar, mata nyaris merem tapi masih maksa buat nunggu pelanggan, apalagi si ibu-ibu imutz yang suka kamu
+            bilang itu, hihihihi. Kalau ada kompetisi tidur mendadak di tengah rapat, kamu pasti juara satu—piala emas
+            plus pelukan dariku sebagai bonus. 😆🤗</p>
+
+        <p>Tapi dibalik itu semua, aku tahu... kamu capek. Dunia kadang gak ramah, dan kamu diam-diam melawan semuanya
+            dengan hati yang lembut. I'm so proud of you, Panda-ku yang tangguh tapi tetap manja kalau udah ketemu
+            bantal. 😶‍🌫</p>
+
+        <p>Kalau aku bisa, aku mau jadi selimutmu... yang nggak cuma ngangetin, tapi juga nenangin. Aku pengen jadi kopi
+            pagimu yang nggak cuma bikin melek, tapi bikin semangatmu hidup lagi. Dan kalau kamu ketiduran lagi pas
+            kerja, aku bakal bisikin pelan di telingamu “Tuan Putriku, istirahatlah sebentar. Dunia bisa nunggu, tapi aa
+            enggak.” axixi 🥰</p>
+
+        <p>Selamat tidur, Vya tayaannnggg...❤ Mimpilah yang indah, dan biarkan aku ada di sana—menjagamu, meski hanya
+            dalam doa. 😇🫶</p>
+
+        <p>I always love you. 😚🤗❤ Dan kalau kamu ngantuk besok pagi, ingat, aku selalu siap jadi sandaranmu, baik
+            secara emosional… atau bahu beneran juga boleh. 🫡🤭</p>
+
+        <p>Goodnight tidur yang nyenyak mimpilah yang indah, MylovelyMypreetyMysweety Mysemuanya we lah nya terlalu
+            banyak kalo disebutin satu satu ihihihi 😚🤗😄</p>
+
+        <p>Ayy... kamu sadar nggak, tiap kali kita ketemu, bahkan sebelum kita pulang, aku udah mulai mikir: “Kapan bisa
+            ketemu kamu lagi?”</p>
+
+        <p>Sumpah, rasanya aneh. Kayak baru buka cemilan, belum sempat kunyah, eh udah habis. Padahal baru duduk
+            sebentar, baru ngobrol sebentar, baru denger tawa kamu sebentar tapi waktu udah kayak tukang parkir galak:
+            nyuruh pergi terus.</p>
+
+        <p>Tapi tau gak? Justru itu yang bikin aku makin sayang. Ketemu kamu tuh gak pernah cukup, dan gak pernah bosen.
+            Bahkan ngeliat kamu ketiduran pun bisa jadi momen paling romantis buat aku apalagi kalau kamu ketiduran
+            sambil megang botol air putih, kayak jagoan super tapi versinya ngantuk, axixixi 😄</p>
+
+        <p>Vya, aku rindu kamu bahkan di tengah pertemuan kita. Dan saat kita berpisah, rindu itu langsung tumbuh jadi
+            tinggi banget kayak bambu buat panda. Ahihihi 😆</p>
+
+        <p>Jadi, kalau nanti kita ketemu lagi, boleh gak aku duduk lebih lama, dan jagain kamu tidur bentar… asal jangan
+            ngorok ya, takut aku ikut ketiduran juga 😆</p>
+
+        <p>Terima kasih udah selalu jadi alasan aku pengen pulang. 🤗 Dan sampai pertemuan berikutnya, hati ini udah
+            siap menunggu kamu… sambil nyiapin tempat nyaman buat kamu tidur siang sebentar.</p>
+
+        <p>Love you, Panda kecilku yang ngantuknya menggemaskan, tapi cintanya selalu bikin aku terjaga. ❤</p>
+
+        <p>Dan tahu gak, kadang aku suka senyum sendiri pas baca ulang chat kita. Kayak nonton film romantis genre
+            komedi—ada manis, ada lucu, dan kamu jadi bintang utamanya. 😄</p>
+
+        <p>Kalau kamu lagi sedih, jangan simpan sendiri ya. Kamu boleh cerita apa aja, bahkan tentang kucing tetangga
+            yang suka curi pandang ke kamu. Aku akan dengerin, sampai kamu bisa senyum lagi. 🐱💕</p>
+
+        <p>Kamu adalah alasan kenapa malamku nggak pernah benar-benar gelap, dan pagiku selalu penuh harapan. Terima
+            kasih sudah hadir, Vya. Dunia boleh capek, tapi kamu selalu jadi tempat istirahat terindah buat hatiku. 🌙
+        </p>
+    </div>
+
+    <script>
+        // Efek bintang jatuh sederhana
+        const canvas = document.getElementById('stars');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let stars = [];
+        for (let i = 0; i < 150; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 1.5,
+                dy: Math.random() * 0.5 + 0.2
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let star of stars) {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+
+                star.y += star.dy;
+                if (star.y > canvas.height) {
+                    star.y = 0;
+                    star.x = Math.random() * canvas.width;
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+
+</html>
